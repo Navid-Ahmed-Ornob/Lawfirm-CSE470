@@ -1,0 +1,438 @@
+/* ============================================================
+   Extra styles for the React version.
+   These replace the inline style="" attributes the PHP pages used,
+   so the components stay readable. style.css is unchanged.
+   ============================================================ */
+
+#root {
+    min-height: 100vh;
+}
+
+/* Let wide tables scroll sideways on phones instead of being cut off */
+.table_container {
+    overflow-x: auto;
+}
+
+.data_table {
+    min-width: 560px;
+}
+
+/* Date inputs were not covered by style.css; match the other inputs */
+.form_group input[type="date"] {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 10px;
+    color: #f1f5f9;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color-scheme: dark;
+    outline: none;
+}
+
+.form_group input[type="date"]:focus {
+    border-color: #d4a843;
+}
+
+/* Navbar dropdowns */
+.nav_menu_item {
+    position: relative;
+}
+
+.nav_link li button.nav_button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav_link li button.nav_button:hover {
+    color: #d4a843;
+    background: rgba(212, 168, 67, 0.08);
+}
+
+.dropdown_panel {
+    position: absolute;
+    top: 48px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    z-index: 999;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown_menu {
+    left: 0;
+    width: 200px;
+}
+
+.dropdown_header {
+    padding: 15px;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown_header strong {
+    color: white;
+}
+
+.dropdown_close {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.notif_item {
+    padding: 10px;
+    border-bottom: 1px solid #334155;
+    font-size: 13px;
+    color: #cbd5e1;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.notif_item:hover {
+    background: #334155;
+    border-radius: 4px;
+}
+
+/* Generic helpers */
+.muted {
+    color: #94a3b8;
+}
+
+.dim {
+    color: #64748b;
+}
+
+.gold {
+    color: #d4a843;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+.mt_30 {
+    margin-top: 30px;
+}
+
+.mt_40 {
+    margin-top: 40px;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.back_link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back_link a {
+    color: #d4a843;
+}
+
+.panel_padded {
+    padding: 24px;
+}
+
+button.btn_primary,
+button.btn_approve,
+button.btn_reject {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn_small {
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.flex_wrap {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.flex_wrap > .form_group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.file_input {
+    padding: 12px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 10px;
+    color: #f1f5f9;
+    width: 100%;
+}
+
+.hint {
+    color: #94a3b8;
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+.loading {
+    color: #94a3b8;
+    text-align: center;
+    padding: 60px 0;
+}
+
+/* Charts */
+.chart_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.chart_card_box {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(30, 41, 59, 0.6);
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.chart_card_box h3 {
+    color: #f1f5f9;
+    margin: 0 0 16px;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(212, 168, 67, 0.2);
+    padding-bottom: 10px;
+}
+
+.chart_canvas {
+    position: relative;
+    height: 220px;
+}
+
+.chart_empty {
+    color: #64748b;
+    text-align: center;
+    padding: 60px 0;
+}
+
+/* Cards and lists */
+
+.btn_view {
+    background: rgba(34, 197, 94, 0.15) !important;
+    color: #86efac !important;
+    border: 1px solid rgba(34, 197, 94, 0.3) !important;
+    margin-right: 6px;
+}
+
+.btn_save {
+    background: rgba(212, 168, 67, 0.15) !important;
+    color: #d4a843 !important;
+    border-color: rgba(212, 168, 67, 0.3) !important;
+}
+
+.btn_receipt {
+    background: rgba(59, 130, 246, 0.15) !important;
+    color: #60a5fa !important;
+    border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.btn_delete {
+    margin-left: 6px;
+}
+
+.data_table td.nowrap {
+    white-space: nowrap;
+}
+
+/* Lawyer verification badge (same look as the other green status badges) */
+.status_Verified {
+    color: #86efac;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Appointment actions and inline reschedule form */
+.action_cell {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.reschedule_form {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 6px 0;
+}
+
+.reschedule_form .form_group {
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 0;
+}
+
+.reschedule_actions {
+    display: flex;
+    gap: 6px;
+    padding-bottom: 4px;
+}
+
+/* Schedule grid */
+.schedule_rules {
+    background: rgba(251, 191, 36, 0.1);
+    border-left: 4px solid #fbbf24;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.schedule_rules ul {
+    list-style-position: inside;
+    color: #fbbf24;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.schedule_scroll {
+    overflow-x: auto;
+}
+
+.schedule_grid {
+    display: grid;
+    grid-template-columns: 120px repeat(7, minmax(90px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    min-width: 820px;
+}
+
+.schedule_header {
+    font-weight: 600;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.schedule_day {
+    font-weight: 600;
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+}
+
+.slot_toggle {
+    display: block;
+    width: 100%;
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+    color: #94a3b8;
+    font-size: 13px;
+    font-family: inherit;
+}
+
+.slot_toggle:hover {
+    border-color: #fbbf24;
+}
+
+.slot_toggle.selected {
+    background: #fbbf24;
+    color: #0f172a;
+    font-weight: bold;
+    border-color: #fbbf24;
+}
+
+.slot_disabled {
+    background: #1e293b;
+    color: #475569;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* Document lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.92);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox_close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 700px) {
+    .nav_link {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
